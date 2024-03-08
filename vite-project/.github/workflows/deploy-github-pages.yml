@@ -1,8 +1,15 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - master
+
+permissions:
+ id-token: write
+ pages: write
+
+
 jobs:
   build:
     environment: production
@@ -10,7 +17,7 @@ jobs:
     defaults:
       run:
       shell: bash
-        working-directory: vite-project
+        working-directory: ./
       steps:
       - name: Fetch Code
         uses: actions/checkout@v4
