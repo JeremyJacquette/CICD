@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
       shell: bash
-        working-directory: ./
+        working-directory: vite-project
       steps:
       - name: Fetch Code
         uses: actions/checkout@v4
